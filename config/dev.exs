@@ -2,11 +2,7 @@ import Config
 
 # Configure your database
 config :server, Server.Repo,
-  username: "elixir_user",
-  password: "desenvolvimento1234",
-  database: "postgres",
-  hostname: "localhost",
-  port: 5432,
+  url: "postgres://elixir_user:desenvolvimento1234@localhost:5432/postgres",
   stacktrace: true,
   show_sensitive_data_on_connection_error: true,
   pool_size: 10

@@ -1,5 +1,5 @@
 <header class="px-4 sm:px-6 lg:px-8">
-  <div class="flex items-center justify-between border-b border-zinc-100 py-3 text-sm">
+  <div class="flex items-center justify-between border-b border-cyan-500/20 py-3 text-sm">
     <div class="flex items-center gap-4">
       <a href="/">
         <img src={~p"/images/logo.svg"} width="36" />
@@ -8,19 +8,10 @@
         v<%= Application.spec(:phoenix, :vsn) %>
       </p>
     </div>
-    <div class="flex items-center gap-4 font-semibold leading-6 text-zinc-900">
-      <a href="https://twitter.com/elixirphoenix" class="hover:text-zinc-700">
-        @elixirphoenix
-      </a>
-      <a href="https://github.com/phoenixframework/phoenix" class="hover:text-zinc-700">
-        GitHub
-      </a>
-      <a
-        href="https://hexdocs.pm/phoenix/overview.html"
-        class="rounded-lg bg-zinc-100 px-2 py-1 hover:bg-zinc-200/80"
-      >
-        Get Started <span aria-hidden="true">&rarr;</span>
-      </a>
+    <div class="flex items-center gap-4 font-semibold leading-6 text-zinc-200">  
+        <a target="_blank" href="https://github.com/andersonlimacrv/elx_server" class="rounded-lg bg-zinc-700 border-2 border-cyan-500/20 drop-shadow-lg hover:drop-shadow-sm hover:bg-zinc-700/80 px-4 py-1 transition-color duration-200 ease-in-out">
+                GitHub <span aria-hidden="true">&rarr;</span>
+        </a>
     </div>
   </div>
 </header>
