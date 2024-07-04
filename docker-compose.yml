@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+      postgres_db:
+            image: postgres
+            container_name: phoenix_db
+            environment:
+                  POSTGRES_USER: elixir_user
+                  POSTGRES_PASSWORD: desenvolvimento1234
+                  POSTGRES_DB: postgres
+            ports:
+                  - '5432:5432'
+            volumes:
+                  - /var/lib/postgresql/data
