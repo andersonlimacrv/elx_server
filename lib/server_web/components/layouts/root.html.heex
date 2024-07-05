@@ -12,47 +12,58 @@
     </script>
   </head>
   <body class="bg-[#272A33] py-4">
-    <ul class="relative z-10 flex items-center gap-4 px-4 sm:px-6 lg:px-8 justify-end text-zinc-200">
-      <%= if @current_user do %>
-        <li class=" leading-6 text-zinc-200">
-          <%= @current_user.email %>
-        </li>
-        <li>
-          <.link
-            href={~p"/users/settings"}
-            class="eading-6 font-semibold hover:text-cyan-500/50"
-          >
-            Settings
-          </.link>
-        </li>
-        <li>
-          <.link
-            href={~p"/users/log_out"}
-            method="delete"
-            class="leading-6 font-semibold hover:text-cyan-500/50"
-          >
-            Log out
-          </.link>
-        </li>
-      <% else %>
-        <li>
-          <.link
-            href={~p"/users/register"}
-            class="leading-6 font-semibold hover:text-cyan-500/50"
-          >
-            Register
-          </.link>
-        </li>
-        <li>
-          <.link
-            href={~p"/users/log_in"}
-            class="leading-6 font-semibold hover:text-cyan-500/50"
-          >
-            Log in
-          </.link>
-        </li>
-      <% end %>
-    </ul>
-    <%= @inner_content %>
+    <div class="flex justify-end">
+        <div class="z-10 relative flex justify-end max-w-2xl right-0"> 
+            <ul class="gap-4 px-4 py-1 mx-4 lg:mx-8 text-zinc-200 flex justify-end w-full bg-slate-500/20 hover:bg-slate-800/40 rounded-md trnasition-all duration-200 drop-shadow-lg border-[1px] border-brand/20">
+            <%= if @current_user do %>
+                <li class=" leading-8 text-zinc-200 hidden md:block transition-colors duration-300">
+                <%= @current_user.email %>
+                </li>
+                <li>
+                <.link
+                    href={~p"/users/settings"}
+                    class="leading-8 font-bold hover:text-brand/80"
+                >
+                    Settings
+                </.link>
+                </li>
+                <li>
+                <.link
+                    href={~p"/users/register"}
+                    class="leading-8 font-bold hover:text-brand/80"
+                >
+                    Register new account
+                </.link>
+                </li>
+                <li>
+                <.link
+                    href={~p"/users/log_out"}
+                    method="delete"
+                    class="leading-8 font-bold hover:text-brand/80"
+                >
+                    Log out
+                </.link>
+                </li>
+            
+                <% else %>
+                <li>
+                <.link
+                    href={~p"/users/log_in"}
+                    class="leading-8 font-bold hover:text-brand/80"
+                >
+                    Log in
+                </.link>
+                </li>
+            <% end %>
+            </ul>
+        </div>
+    </div>
+    <div class="flex">
+        <aside class='bg-red-600'> ola mundo
+         </aside>
+        <div class ="">
+            <%= @inner_content %>
+        </div>
+    </div>
   </body>
 </html>
